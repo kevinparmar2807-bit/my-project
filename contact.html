@@ -1,9 +1,5 @@
 <!doctype html>
-<!--
-  BookNest - Contact & Feedback Page (contact.html)
-  Purpose: Allows readers to submit feedback and view contact details
-  Key Elements: Feedback form, Contact Info panel, submit listener (contactDemo)
--->
+<!-- BookNest - Contact & Feedback Page (contact.html) - Structured with Bootstrap 4.2.1 -->
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -11,13 +7,14 @@
     <title>Contact | BookNest</title>
     <link href="bootstrap4.2.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-<body>
+<body class="bg-light">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-white sticky-top shadow-sm py-3">
         <div class="container">
             <a class="navbar-brand text-primary font-weight-bold" href="index.html">Book<span class="text-warning">Nest</span></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav">
+            <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#nav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="nav">
@@ -26,58 +23,57 @@
                     <li class="nav-item"><a class="nav-link" href="books.html">Books</a></li>
                     <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
-                    <li class="nav-item"><a class="btn btn-outline-primary btn-sm px-3" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link active font-weight-bold text-primary" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="btn btn-outline-primary btn-sm px-3 ml-lg-3" href="login.html">Login</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Page Banner -->
-    <section class="page-banner">
+    <!-- Centered Header Hero Section -->
+    <section class="py-5 bg-white border-bottom text-center">
         <div class="container">
-            <div class="eyebrow">GET IN TOUCH</div>
-            <h1 class="font-weight-bold">Contact BookNest</h1>
-            <p class="text-secondary">Have a question or suggestion? Send us a message.</p>
+            <div class="eyebrow text-warning font-weight-bold">GET IN TOUCH</div>
+            <h1 class="font-weight-bold text-dark mb-2">Contact BookNest</h1>
+            <p class="lead text-muted mb-0">Have a question or suggestion? Send us a message.</p>
         </div>
     </section>
 
-    <!-- Contact & Feedback Section -->
-    <section class="section-pad">
+    <!-- Contact & Feedback Content Row Section -->
+    <section class="py-5 bg-light">
         <div class="container">
             <div class="row">
+                <!-- Left Form Card -->
                 <div class="col-lg-7 mb-4">
-                    <form id="contactForm" class="form-card p-4 border rounded" onsubmit="contactDemo(event)" novalidate>
-                        <h3 class="font-weight-bold mb-4">Send Feedback</h3>
-                        
+                    <form id="contactForm" class="form-card p-4 border rounded shadow-sm bg-white h-100" onsubmit="contactDemo(event)" novalidate>
+                        <h3 class="font-weight-bold mb-4 text-dark text-center">Send Feedback</h3>
                         <div class="form-group">
-                            <label class="font-weight-bold">Name</label>
-                            <input id="contactName" class="form-control" placeholder="Enter your name">
+                            <label class="font-weight-bold text-secondary">Name</label>
+                            <input id="contactName" class="form-control shadow-sm" placeholder="Enter your name">
                         </div>
-                        
                         <div class="form-group">
-                            <label class="font-weight-bold">Contact No</label>
-                            <input id="contactNo" class="form-control" placeholder="Enter contact number">
+                            <label class="font-weight-bold text-secondary">Contact No</label>
+                            <input id="contactNo" class="form-control shadow-sm" placeholder="Enter contact number">
                         </div>
-                        
                         <div class="form-group">
-                            <label class="font-weight-bold">Feedback</label>
-                            <textarea class="form-control" rows="4" placeholder="Enter your feedback"></textarea>
+                            <label class="font-weight-bold text-secondary">Feedback</label>
+                            <textarea class="form-control shadow-sm" rows="3" placeholder="Enter your feedback"></textarea>
                         </div>
-                        
-                        <button type="submit" class="btn btn-primary btn-block mt-3">Submit Feedback</button>
+                        <button type="submit" class="btn btn-primary btn-block mt-4 shadow-sm btn-lg">Submit Feedback</button>
                     </form>
                 </div>
-                
+                <!-- Right Details Card containing Image -->
                 <div class="col-lg-5 mb-4">
-                    <div class="form-card p-4 border rounded">
-                        <h3 class="font-weight-bold mb-4">Contact Information</h3>
-                        <p>📧 support@booknest.example</p>
-                        <p>📞 +91 99791 97599</p>
-                        <p>📍 Surat, Gujarat, India</p>
-                        <hr>
-                        <h5>Frequently Asked</h5>
-                        <p class="text-secondary">Digital books are delivered through your account after a successful order checkout process.</p>
+                    <div class="form-card p-4 border rounded shadow-sm bg-white h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <h3 class="font-weight-bold mb-4 text-dark">Contact Information</h3>
+                            <p class="mb-2">📧 <strong>support@booknest.example</strong></p>
+                            <p class="mb-2">📞 <strong>+91 99791 97599</strong></p>
+                            <p class="mb-4">📍 <strong>Surat, Gujarat, India</strong></p>
+                        </div>
+                        <div class="mt-3">
+                            <img src="https://images.unsplash.com/photo-1534536281715-e28d76689b4d?q=80&w=400&auto=format&fit=crop" class="img-fluid rounded shadow-sm" alt="Office Setup">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -85,10 +81,10 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="py-4 border-top">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
                     <h5 class="font-weight-bold text-warning mb-1">BookNest</h5>
                     <p class="small text-muted mb-0">Read. Learn. Grow. A student project e-book store.</p>
                 </div>

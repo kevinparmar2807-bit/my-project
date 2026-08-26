@@ -85,11 +85,15 @@ const addToCart = (title) => alert(title + ' successful added to cart');
 $(() => {
   displayBooks(books.slice(0, 4), 'featuredBooks'); // Home page top featured books
   if ($('#bookList').length) {
-    displayBooks(books, 'bookList'); // Catalog page all books
+    const urlParams = new URLSearchParams(window.location.search);
+    const catParam = urlParams.get('category');
+    if (catParam) $('#filterCat').val(catParam); // Apply URL parameter filter
+
     const filterBooks = () => {
       const q = $('#searchBook').val().toLowerCase(), c = $('#filterCat').val();
       displayBooks(books.filter(b => (b.title.toLowerCase().includes(q) || b.author.toLowerCase().includes(q)) && (c === 'all' || b.category === c)), 'bookList');
     };
+    filterBooks(); // Initial render
     $('#searchBook').on('input', filterBooks); $('#filterCat').on('change', filterBooks); // Live catalog searching
   }
 });

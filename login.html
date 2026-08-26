@@ -1,9 +1,5 @@
 <!doctype html>
-<!--
-  BookNest - Account Login Page (login.html)
-  Purpose: Prompts user credentials (email & password) and runs login validation
-  Validation Handler: loginDemo(event)
--->
+<!-- BookNest - Account Login Page (login.html) - Structured with Bootstrap 4.2.1 -->
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -11,13 +7,14 @@
     <title>Login | BookNest</title>
     <link href="bootstrap4.2.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-<body>
+<body class="bg-light">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-white sticky-top shadow-sm py-3">
         <div class="container">
             <a class="navbar-brand text-primary font-weight-bold" href="index.html">Book<span class="text-warning">Nest</span></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav">
+            <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#nav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="nav">
@@ -27,37 +24,33 @@
                     <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item"><a class="btn btn-outline-primary btn-sm px-3 active" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="btn btn-outline-primary btn-sm px-3 active ml-lg-3" href="login.html">Login</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Login Card -->
-    <section class="section-pad">
+    <section class="py-5 my-md-4">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-5">
-                    <form class="form-card p-4 border rounded" onsubmit="loginDemo(event)" novalidate>
+                    <form class="form-card p-4 border rounded shadow-sm bg-white" onsubmit="loginDemo(event)" novalidate>
                         <div class="text-center mb-4">
-                            <div style="font-size: 50px;" class="mb-2">👋</div>
-                            <h2 class="font-weight-bold">Welcome Back</h2>
-                            <p class="text-secondary">Login to manage your BookNest account.</p>
+                            <div class="h1 mb-2">👋</div>
+                            <h3 class="font-weight-bold text-dark">Welcome Back</h3>
+                            <p class="text-muted small">Login to manage your BookNest account.</p>
                         </div>
-                        
                         <div class="form-group">
-                            <label>Email Address</label>
-                            <input class="form-control" id="loginEmail" required type="email" placeholder="you@example.com">
+                            <label class="font-weight-bold text-secondary">Email Address</label>
+                            <input id="loginEmail" class="form-control shadow-sm" type="email" placeholder="you@example.com">
                         </div>
-                        
                         <div class="form-group mb-4">
-                            <label>Password</label>
-                            <input class="form-control" id="loginPassword" required type="password" placeholder="••••••••">
+                            <label class="font-weight-bold text-secondary">Password</label>
+                            <input id="loginPassword" class="form-control shadow-sm" type="password" placeholder="••••••••">
                         </div>
-                        
-                        <button class="btn btn-primary btn-block btn-lg">Login</button>
-                        
-                        <p class="text-center small text-secondary mt-3">New to BookNest? <a href="registration.html">Create an account</a></p>
+                        <button type="submit" class="btn btn-primary btn-block btn-lg shadow-sm">Login</button>
+                        <p class="text-center small text-muted mt-4 mb-0">New to BookNest? <a href="registration.html" class="font-weight-bold text-primary">Create an account</a></p>
                     </form>
                 </div>
             </div>
@@ -65,10 +58,10 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="py-4 border-top">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
                     <h5 class="font-weight-bold text-warning mb-1">BookNest</h5>
                     <p class="small text-muted mb-0">Read. Learn. Grow. A student project e-book store.</p>
                 </div>
