@@ -1,116 +1,52 @@
-:root {
-  --primary: #6c4df6;
-  --secondary: #ffb84d;
-  --dark: #17152a;
-  --soft: #f7f5ff;
-}
-
+/* Clean & Minimal custom overrides relying on Bootstrap 4.2.1 style layout classes */
 body {
-  font-family: Arial, sans-serif;
-  background: #f8f9fa;
-  color: #212529;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: ghostwhite;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
+/* Brand logo typography customizing */
 .navbar-brand {
   font-weight: 800;
-  color: var(--primary) !important;
-  font-size: 1.35rem;
+  color: darkslateblue !important;
+  font-size: 1.45rem;
 }
 
-.nav-link {
-  font-weight: 600;
-}
-
+/* Top Hero section soft background gradient */
 .hero {
-  padding: 90px 0;
-  background: linear-gradient(135deg, #eef5ff, #fff);
+  background: linear-gradient(135deg, aliceblue, white);
 }
 
-.hero h1 {
-  font-size: 48px;
-  font-weight: 700;
-}
-
-.hero h1 span {
-  color: #0d6efd;
-}
-
-.section-pad {
-  padding: 75px 0;
-}
-
+/* Inner header banner styling */
 .page-banner {
-  padding: 55px 0;
-  background: #eef5ff;
+  background: aliceblue;
 }
 
-.eyebrow {
-  font-size: 13px;
-  font-weight: 700;
-  color: #0d6efd;
-  letter-spacing: 1px;
+/* Elegant cards, form inputs and hover motion curves */
+.card, .form-card, .category-card {
+  border-radius: 12px !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s, box-shadow 0.25s;
 }
 
-.section-title {
-  font-weight: 700;
-}
-
-.book-card, .feature-card, .category-card, .form-card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 5px 20px rgba(0,0,0,.07);
-  height: 100%;
-}
-
-.book-cover {
-  height: 180px;
-  border-radius: 12px;
-  background: #e9f2ff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 70px;
-  margin-bottom: 15px;
-}
-
-.stat-strip {
-  background: var(--dark);
-  color: #fff;
-}
-
-.stat-number {
-  font-size: 2rem;
-  font-weight: 800;
-}
-
-footer {
-  background: #141326;
-  color: #bdb9ce;
-  padding: 28px 0;
-  margin-top: auto;
-}
-
-.form-control, .form-select {
-  margin-bottom: 12px;
-}
-
-.error-msg {
-  font-size: 14px;
-  color: #dc3545;
-  margin-top: -5px;
-  margin-bottom: 10px;
-}
-
-.category-card {
+.card:hover, .category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
   text-decoration: none;
-  color: inherit;
 }
 
-.category-icon {
-  font-size: 45px;
-  margin-bottom: 10px;
+/* Highlight stats bar styling */
+.stat-strip {
+  background: midnightblue;
+  color: white;
+}
+
+/* Bottom footer sticky alignment and padding overrides */
+footer {
+  background: midnightblue;
+  color: silver;
+  margin-top: auto;
 }
